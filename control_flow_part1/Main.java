@@ -12,47 +12,43 @@ public class Main {
         Example: ==, !=, >, <, >=, <=, &&, ||
          */
         boolean x = true;
-        boolean y = true;
-        if (x && y){ // true
-            System.out.printf("true");
-        }
-        else if (x == y){
-            System.out.printf("true");
-        }
-        else{ // false
-            System.out.printf("false");
-        }
-    }
+        boolean y = false;
 
-    // ternary operator
-    public static void ternary_operator(){
-        // simpler form of an if statement
-        // condition ? value returned if cond true : value returned if cond false
-        int temp = 3 > 2 ? 10 : 15;
-        //System.out.printf("%d", temp);
-
+        if (x || y)
+        {
+            if(x && y)
+            {
+                System.out.println("True!");
+            }
+            else {
+                System.out.println("False!");
+            }
+        }
+        else{
+            System.out.println("False!");
+        }
     }
 
     // for loops, continue, and break statements
     public static void forloops_continue_break() {
-        for (int j=0; j<=6; j++)
+
+
+        for (int j=0; j<10; j++)
         {
-            if (j==4)
-            {
+            // 0 1 2 3 4  hey you reached five here 5 6 7 8 9
+            if (j == 5){
+                System.out.println("hey you reached five here!");
                 continue;
             }
-            if (j == 6)
-            {
-                break;
-            }
-            System.out.println(j+" ");
+            System.out.println(j);
         }
+
     }
 
     //switch statement
     public static void switch_statement(){
         // similar to if but each case is based on a single value
-        // switch (variable (byte, short, chart, int, String) for switch)
+        // switch (variable (byte, short, char, int, String) for switch)
         // {
             // case first:
                 // do something;
@@ -65,18 +61,20 @@ public class Main {
                 // break;
         // }
 
-        String text = "bye";
-        switch (text)
+        int input = 100;
+        switch (input) // "bye"
         {
-            case "hello":
-                System.out.println(text);
+            case 1: // 1 == 1?
+                System.out.println(input);
+                break;
+            case 2: // 2 == 1?
+                System.out.println(input);
                 break;
             default:
                 System.out.println("didn't find anything");
                 break;
 
         }
-
 
         /*
         additional notes
@@ -92,9 +90,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        if_statement_comparison_operators();
-        ternary_operator();
-        switch_statement();
+        //if_statement_comparison_operators();
+        //ternary_operator();
+        //switch_statement();
         forloops_continue_break();
     }
 }
