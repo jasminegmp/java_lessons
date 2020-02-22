@@ -32,7 +32,6 @@ public class Main {
     // for loops, continue, and break statements
     public static void forloops_continue_break() {
 
-
         for (int j=0; j<10; j++)
         {
             // 0 1 2 3 4  hey you reached five here 5 6 7 8 9
@@ -41,6 +40,38 @@ public class Main {
                 continue;
             }
             System.out.println(j);
+        }
+
+    }
+
+    // problem 4
+    // write a program that prints out every single character in a string using a for loop
+    public static void problem_4(){
+
+        // [1,2,3,4,5,6]
+        // [true, false ,true]
+
+        char inputArray = ['h','e','l','l','o'];
+        // length - 1: 5-1 = 4
+        System.out.println("%c", inputArray[0]); // 'h'
+        System.out.println("%c", inputArray[4]); // 'o'
+
+        // for (initial value, up to what value, increment value)
+        for(int i =0 ; i <= 4; i++) {
+            System.out.println("%c", inputArray[i]);// 'h', 'e', 'l',
+        }
+    }
+
+    // problem 5
+    // write a program that prints out every single character in a string using a for loop
+    public static void problem_5(){
+
+        //[0,2,4,6,8,10]
+        int array = [0,1,2,3,4,5,6,7,8,9,10];
+
+        // for (initial value, up to what value, increment value)
+        for(int i = 0 ; i <= 10; i+=2) { // 0, 2,4,6,8,10
+            System.out.println("%d", array[i]);//
         }
 
     }
@@ -75,7 +106,6 @@ public class Main {
                 break;
 
         }
-
         /*
         additional notes
          * switch(1+2+23) valid
@@ -83,17 +113,15 @@ public class Main {
          * switch(ab+cd) invalid
          * switch(a+b+c) invalid
          */
-
     }
-
-
 
     public static void main(String[] args) {
 
         //if_statement_comparison_operators();
         //ternary_operator();
         //switch_statement();
-        forloops_continue_break();
+        //forloops_continue_break();
+        problem_4();
     }
 }
 
